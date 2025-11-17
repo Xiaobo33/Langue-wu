@@ -14,6 +14,10 @@ On a extrait les paires audio–transcription du corpus.
 Les fichiers audio sont organisés dans des sous-dossiers (G0004, G0005, etc.) sous WAV/, tandis que les transcriptions correspondantes se trouvent dans UTTRANSINFO.txt.
 Du coup on a utilisé un script python `make_jsonl.py` pour parcourir automatiquement tous les fichiers .wav, récupérer leur durée, associer chaque enregistrement à sa transcription en Wu, puis générer trois fichiers au format JSONL : train.jsonl, dev.jsonl et test.jsonl (80% / 10% / 10%).
 
+- train: 3855
+- dev  : 481
+- test : 483
+
 2. Normalisation du Wu
 Création d'un petit lexique de correspondances (ex. 吾 → 我, 伐 → 不, 侬 → 你).
 
