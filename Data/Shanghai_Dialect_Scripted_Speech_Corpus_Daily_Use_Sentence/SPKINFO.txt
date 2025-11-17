@@ -1,0 +1,11 @@
+CHANNEL	SPEAKER_ID	GENDER	AGE	REGION,CITY	DEVICE
+C0	G0004	F	37	Shanghai	HUAWEIVTR-AL00
+C0	G0005	F	37	Shanghai	iPhone 6
+C0	G0006	F	39	Shanghai	XiaomiMI 4LTE
+C0	G0009	F	42	Shanghai	HONORLLD-AL20
+C0	G0013	F	30	Shanghai	XiaomiMi Note 3
+C0	G0102	M	19	Shanghai	XiaomiMIX 2
+C0	G0103	M	20	Shanghai	iPhone SE
+C0	G0105	M	21	Shanghai	iPhone 7 Plus
+C0	G0107	M	38	Shanghai	iPhone 6 Plus
+C0	G0108	M	32	Shanghai	iPhone11,8
