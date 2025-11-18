@@ -18,10 +18,10 @@ Du coup on a utilisé un script python `make_jsonl.py` pour parcourir automatiqu
 - dev  : 481
 - test : 483
 
-2. Normalisation du Wu
-On a écrit d'abord un script python `make_vocab.py` pour construire un tableau de vocabulaire en Wu， il extrait tous les caractères présents dans les transcriptions en Wu. Chaque caractère devient une entrée du vocabulaire utilisé par le modèle CTC.
+2. Création du vocabulaire
+On a écrit un script python `make_vocab.py` pour construire un tableau de vocabulaire en Wu， il extrait tous les caractères présents dans les transcriptions en Wu. Chaque caractère devient une entrée du vocabulaire utilisé par le modèle CTC.
 
-Création d'un petit lexique de correspondances (ex. 吾 → 我, 伐 → 不, 侬 → 你).
+Au début je voudrais faire une normalisation mais après inspection du corpus, j'ai constaté que les transcriptions du Wu sont déjà cohérentes et ne présentent pas de variations graphiques importantes. Le vocabulaire a donc été construit directement à partir des caractères présents dans le corpus original.
 
 3. Tests des modèles existants avec le fichier vocab.json
 - MMS : ne reconnaît pas wuu, mais fonctionne partiellement avec cmn-script_simplified.
