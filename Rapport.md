@@ -19,9 +19,11 @@ Du coup on a utilisé un script python `make_jsonl.py` pour parcourir automatiqu
 - test : 483
 
 2. Normalisation du Wu
+On a écrit d'abord un script python `make_vocab.py` pour construire un tableau de vocabulaire en Wu， il extrait tous les caractères présents dans les transcriptions en Wu. Chaque caractère devient une entrée du vocabulaire utilisé par le modèle CTC.
+
 Création d'un petit lexique de correspondances (ex. 吾 → 我, 伐 → 不, 侬 → 你).
 
-3. Tests des modèles existants
+3. Tests des modèles existants avec le fichier vocab.json
 - MMS : ne reconnaît pas wuu, mais fonctionne partiellement avec cmn-script_simplified.
 - Whisper (OpenAI) : produit un chinois standard fluide mais dévie du sens du Wu.
 - Qwen3-ASR (Alibaba) : résultats plus naturels, sens global conservé.
