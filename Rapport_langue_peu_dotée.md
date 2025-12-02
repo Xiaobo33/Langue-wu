@@ -33,7 +33,7 @@ Au début je voudrais faire une normalisation mais après inspection du corpus, 
 
 ### Travail réalisé sur Google Colab
 
-Lien vers [Googledrive]https://drive.google.com/drive/folders/1lltlgEmoqWgVii6QeJGJJ3WnXR7Ary56
+Lien vers Googledrive[https://drive.google.com/drive/folders/1lltlgEmoqWgVii6QeJGJJ3WnXR7Ary56]
 
 Correction des chemins d'accès : 
 
@@ -41,6 +41,6 @@ J'ai refait les fichiers jsonl, pour fixer les chemins dans le contenu, afin d'p
 
 Outils utilisés : 
 
-- [pytorch]https://docs.pytorch.org/audio/stable/tutorials/audio_datasets_tutorial.html
-- [torchaudio]https://docs.pytorch.org/audio/stable/
-- [JiWER]https://jitsi.github.io/jiwer/
+- pytorch[https://docs.pytorch.org/audio/stable/tutorials/audio_datasets_tutorial.html]
+- torchaudio[https://docs.pytorch.org/audio/stable/]
+- JiWER[https://jitsi.github.io/jiwer/]
