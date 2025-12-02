@@ -44,3 +44,9 @@ Outils utilisés :
 - [pytorch](https://docs.pytorch.org/audio/stable/tutorials/audio_datasets_tutorial.html)
 - [torchaudio](https://docs.pytorch.org/audio/stable/)
 - [JiWER](https://jitsi.github.io/jiwer/)
+
+
+
+changer le modèle de **mms-1b-all** à **mms-1b-fl102** qui est plus légère.
+changer le batchsize de 2 à 1
+epoch de 5 à 3
