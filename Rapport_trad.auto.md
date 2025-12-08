@@ -1,7 +1,7 @@
 # Projet traduction automatique (Traduction entre La langue Wu et le mandarin)
 
 ## Objectif :
-Construction d'un modèle de traduction automatique, nous adaptons une architecture seq2seq, entrainée sur le corpus Shangaïen - Mandarin.
+Construction d'un modèle de traduction automatique, nous adaptons une architecture transformer, entrainée sur le corpus Shangaïen - Mandarin.
 
 ## Entrées (corpus) :
 
@@ -21,8 +21,8 @@ Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International Licen
 Corpus parallèle (Wu - Mandarin) de parole transcrite. Les textes alignés sont en format csv.
 
 #### 6. Langues 
-- langue source : Wu (Shanghaïen)
-- langue cible : Mandarin
+- langue source : Mandarin
+- langue cible : Wu (Shanghaïen)
 
 #### 7. Taille de corpus : 
 
@@ -33,7 +33,7 @@ Corpus parallèle (Wu - Mandarin) de parole transcrite. Les textes alignés sont
 ## Modèles
 
 #### 1.Nom : 
-seq2seq encodeur-decodeur
+Transformer
 
 #### 2. Nombre de couches : 
 - encodeur : 2-4 couches
@@ -56,8 +56,8 @@ Apprentissage supervisé
 - Split 3 set train/dev/test
 
 #### 2. Entraînement
-Nous aimerions comparer trois architectures de modèles de traduction, chacune prise en charge par un membre du groupe :
-Xiaobo -> Transformers, Simeng -> BiLSTM, Hongying -> BiGRU
+Nous aimerions essayer le modèle de **Transformer** et puis fine-tuning le modèle : 
+
 - Entraîner une baseline Mandarin -> Wu sur sur le jeu d’entraînement de notre corpus parallèle (3,855 paires de phrases)
 - Comparer les performances de ces trois modèles et sélectionner l’architecture la plus performante
 - Pour l’architecture choisie, mettre en place une back-translation :
