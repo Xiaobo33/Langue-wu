@@ -36,9 +36,9 @@ Corpus parallèle (Wu - Mandarin) de parole transcrite. Les textes alignés sont
 Transformer
 
 #### 2. Nombre de couches : 
-- encodeur : 2-4 couches
-- decodeur : 2-4 couches
-- couche d'attention (pas encore décidé)
+- encodeur : 4 couches
+- decodeur : 4 couches
+- multi-head self-attentions
 
 #### 3. Type d'encodage
 Tokenisation caractères
@@ -68,3 +68,35 @@ Nous aimerions essayer le modèle de **Transformer** et puis fine-tuning le mod�
 
 #### 3. Évaluation
 On va évaluer manuellement, c'est à dire donner les commentaires pour les sorties, si on a encore le temps, on va peut-être faire un BLEU sur le set de test.
+
+
+### Architecture du Modèle : Transformer
+
+#### Baseline
+
+Encodeur (Mandarin) -> Decodeur (Wu) -> Output Layer
+
+#### Hyperparamètres :
+
+| Hyperparamètre | Valeur | Description |
+|----------------|--------|-------------|
+| `D_MODEL` | 128 | Dimension des embeddings |
+| `N_ENC` | 4 | Nombre de couches d'encodeur |
+| `N_DEC` | 4 | Nombre de couches de décodeur |
+| `N_HEADS` | 8 | Nombre de têtes d'attention |
+| `DFF` | 512 | Dimension du feed-forward |
+| `DROP` | 0.1 | Taux de dropout |
+| `MAX_SRC_LEN` | 50 | Longueur max source |
+| `MAX_TGT_LEN` | 50 | Longueur max cible |
+| `MAX_VOCAB_SIZE` | 4000 | Taille max du vocabulaire |
+
+#### Callbacks
+
+1. **ModelCheckpoint** :
+   - Sauvegarde le meilleur modèle selon `val_loss`
+   - Permet de récupérer le modèle optimal
+
+2. **EarlyStopping** :
+   - `patience=5` : arrête si pas d'amélioration pendant 5 epochs
+   - `restore_best_weights=True` : restaure les meilleurs poids
+   - Évite le sur-apprentissage
