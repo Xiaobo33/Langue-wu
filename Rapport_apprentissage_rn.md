@@ -107,3 +107,16 @@ Encodeur (Mandarin) -> Decodeur (Wu) -> Output Layer
    - `patience=5` : arrête si pas d'amélioration pendant 5 epochs
    - `restore_best_weights=True` : restaure les meilleurs poids
    - Évite le sur-apprentissage
+
+
+
+#### Résultats
+
+| Mandarin | Wu | Evaluation |
+|----------|----|------------|
+|你好 | 侬好叫吾老 |
+|你今天吃饭了吗 | 侬今朝吃饭了伐 |
+|我不会说上海话 | 吾伐会的讲呢 |
+|今天天气真好 | 今朝天气真呃好 |
+|请你帮我一下 | 请侬帮吾一下 |
+|祝您开心 | 祝侬开心心 |
